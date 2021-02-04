@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Compresser</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	<style type="text/css">
+		.textarea{
+			padding-top: 20px;
+			padding-bottom: 80px;
+			background-color: #f5f4f4;
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+
+		.button{
+			float: right;
+			border: none;
+			background-color:  #551A8B;
+			color: white;
+			border-radius: 4px;
+			margin-top: 10px;
+			padding: 5px 30px 5px 30px;
+		}
+
+		.copy{
+			float: right;
+			margin-bottom: 10px;
+			margin-top: -2em;
+			border:1px solid #55AE3A;
+			padding-left: 20px;
+			padding-right: 20px;
+			margin-right: 10px;
+			border-radius: 4px;
+		}
+
+		.button:hover{
+			background-color: #CC99CC;
+      		color: black;
+      		cursor: pointer;
+		}
+		@media only screen and (max-width: 497px) {
+		  .button {
+		    padding: 5px 10px 5px 10px;
+		  }
+		}
+		@media only screen and (max-width: 450px) {
+		  .copy {
+		    padding-left: 6px;
+			padding-right: 6px;
+		  }
+		}
+		@media only screen and (max-width: 361px) {
+		  .button {
+		    padding: 5px 5px 5px 5px;
+		    font-size: 12px;
+		  }
+		}
+	</style>
+</head>
+<body>
+	<div class="container-fluid textarea">
+	  <h2 style="text-shadow: 2px 2px white;" class="section-heading">Compress and Decompress Your Codes!</h2>
+	  <p style="color: #8E388E";>Paste the code below in the <b>Textbox</b> that you want to <b>Compress</b> or <b>Decompress(JSON)</b> and Select from the Dropdown the Operation you want to perform.</p>
+	  <form>
+	    <div class="form-group" style="background-color: rgba(0,0,0,0.1);padding-top: 40px;position: relative;">
+	    	<select name="drop" id="drop" class="copy" onchange="fun()">
+	    		<option value="" disabled selected>Select your Option</option>
+			  <option value="one">Compress HTML</option>
+			  <option value="one">Compress CSS</option>
+			  <option value="one">Compress JavaScript</option>
+			  <option value="one">Compress JSON</option>
+			  <option value="two">Decompress JSON</option>
+			</select>
+	    	<button type="button" class="copy" id="copy">COPY</button>
+	      <textarea class="form-control" rows="16" id="comment" name="text" placeholder="Paste your code here." required style="z-index: +10;"></textarea>
+	      
+	    </div>
+	   <!-- <button type="button" class="button" id="download">Download</button>-->
+	    <button type="button" class="button" id="reset" style="width:250px">Reset Code</button>
+	    <!--<button type="button" class="button" id="buts" style="margin-right: 6px;">Compress</button>-->
+
+	  </form>
+	</div>
+	<script type="text/javascript" src="compresser.js"></script>
+</body>
+</html>
